@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#15803d">
+  <meta name="description" content="Fresh Market — bilingual vegetable wholesale marketplace and stock manager.">
+  <title>Fresh Market Wholesale</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="Fresh Market home"><span class="brand-mark">🥬</span><span>Fresh<span class="brand-light">Market</span></span></a>
+    <div class="top-actions">
+      <label class="language-label" for="language">Language</label>
+      <select id="language" aria-label="Language"><option value="en">English</option><option value="km">ខ្មែរ</option></select>
+      <button class="icon-btn" id="installBtn" hidden>⬇ <span data-i18n="install">Install app</span></button>
+      <button class="user-chip" id="roleBtn">👤 <span id="roleLabel">Customer</span></button>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="store-card"><div class="store-avatar">🌱</div><div><b data-i18n="storeName">Fresh Market</b><small data-i18n="storeSub">Wholesale vegetables</small></div></div>
+      <nav id="navigation">
+        <button class="nav-item active" data-page="shop">🛒 <span data-i18n="shop">Shop vegetables</span></button>
+        <button class="nav-item" data-page="orders">📦 <span data-i18n="orders">My orders</span></button>
+        <button class="nav-item admin-only" data-page="dashboard">📊 <span data-i18n="dashboard">Dashboard</span></button>
+        <button class="nav-item admin-only" data-page="inventory">🥕 <span data-i18n="inventory">Inventory</span></button>
+        <button class="nav-item admin-only" data-page="customers">👥 <span data-i18n="customers">Customers</span></button>
+      </nav>
+      <div class="sidebar-note"><span>🚚</span><b data-i18n="freshPromise">Fresh goods, fair prices.</b><small data-i18n="freshPromiseSub">Wholesale made simple.</small></div>
+    </aside>
+
+    <main class="main-content">
+      <section class="welcome-row">
+        <div><p class="eyebrow" data-i18n="eyebrow">FRESH FROM THE FARM</p><h1 id="pageTitle" data-i18n="shopTitle">Vegetable marketplace</h1><p class="muted" data-i18n="shopSubtitle">Quality vegetables for shops, restaurants and families.</p></div>
+        <button class="primary-btn cart-top" id="cartOpen">🛒 <span data-i18n="cart">Cart</span> <span class="count" id="cartCount">0</span></button>
+      </section>
+
+      <section id="shopPage" class="page">
+        <div class="hero-banner"><div><span class="hero-tag" data-i18n="wholesaleTag">WHOLESALE • FRESH • LOCAL</span><h2 data-i18n="heroTitle">Good food starts<br>with fresh vegetables.</h2><p data-i18n="heroText">Order by kilogram, bag or box. Great value for every business.</p><button class="light-btn" id="browseBtn" data-i18n="browse">Browse vegetables ↓</button></div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1708771641703-0df3d179cec3?auto=format&fit=crop&w=1000&q=85" alt="Farmer harvesting fresh vegetables in a field"><span>🌱 From local farms to your table</span></div></div>
+        <div class="toolbar"><div class="search-wrap">🔎 <input id="searchInput" type="search" placeholder="Search vegetables..." data-i18n-placeholder="searchPlaceholder"></div><select id="categoryFilter" aria-label="Filter category"><option value="all" data-i18n="allCategories">All categories</option><option value="Leafy" data-i18n="leafy">Leafy greens</option><option value="Root" data-i18n="root">Root vegetables</option><option value="Fruit" data-i18n="fruit">Fruit vegetables</option><option value="Other" data-i18n="other">Other</option></select></div>
+        <div class="farm-story"><img src="https://images.unsplash.com/photo-1746014929708-fcb859fd3185?auto=format&fit=crop&w=900&q=85" alt="Farmers harvesting leafy vegetables"><div><span class="eyebrow">FARM TO MARKET</span><h2>Grown with care. Delivered fresh.</h2><p>We connect growers with shops, restaurants and families. Choose fresh vegetables and order by kilogram.</p></div></div><div class="section-heading"><div><h2 data-i18n="popular">Popular vegetables</h2><p class="muted" data-i18n="popularSub">Fresh picks available for wholesale.</p></div><span class="result-count" id="resultCount"></span></div>
+        <div class="product-grid" id="productGrid"></div>
+      </section>
+
+      <section id="dashboardPage" class="page hidden">
+        <div class="section-heading"><div><h2 data-i18n="businessOverview">Business overview</h2><p class="muted" data-i18n="overviewSub">A quick look at your shop.</p></div><div class="dashboard-actions"><button class="outline-btn" id="notifyBtn">🔔 Enable order alerts</button><button class="outline-btn" id="exportBtn">⬇ <span data-i18n="export">Export orders CSV</span></button></div></div>
+        <div class="stats-grid" id="statsGrid"></div>
+        <div class="panel"><div class="panel-head"><h3 data-i18n="recentOrders">Recent orders</h3><span class="muted" data-i18n="latestActivity">Latest activity</span></div><div id="recentOrders"></div></div>
+      </section>
+
+      <section id="inventoryPage" class="page hidden">
+        <div class="section-heading"><div><h2 data-i18n="manageInventory">Manage inventory</h2><p class="muted" data-i18n="inventorySub">Add products and update stock and prices.</p></div><button class="primary-btn" id="addProductBtn">＋ <span data-i18n="addProduct">Add product</span></button></div>
+        <div class="panel table-panel"><div class="table-scroll"><table><thead><tr><th data-i18n="product">Product</th><th data-i18n="category">Category</th><th data-i18n="price">Price / kg</th><th data-i18n="stock">Stock (kg)</th><th data-i18n="actions">Actions</th></tr></thead><tbody id="inventoryRows"></tbody></table></div></div>
+      </section>
+
+      <section id="customersPage" class="page hidden">
+        <div class="section-heading"><div><h2 data-i18n="customerList">Customer list</h2><p class="muted" data-i18n="customerSub">People who have ordered from your shop.</p></div></div>
+        <div class="panel table-panel"><div class="table-scroll"><table><thead><tr><th data-i18n="customer">Customer</th><th data-i18n="phone">Phone</th><th data-i18n="orders">Orders</th><th data-i18n="totalSpent">Total spent</th></tr></thead><tbody id="customerRows"></tbody></table></div></div>
+      </section>
+
+      <section id="ordersPage" class="page hidden">
+        <div class="section-heading"><div><h2 data-i18n="orderHistory">Order history</h2><p class="muted" data-i18n="orderSub">Check your order status and details.</p></div></div>
+        <div id="ordersList" class="orders-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="mobile-nav">
+    <button class="active" data-page="shop">🛒<small data-i18n="shop">Shop</small></button>
+    <button data-page="orders">📦<small data-i18n="orders">Orders</small></button>
+    <button class="admin-only" data-page="dashboard">📊<small data-i18n="dashboard">Dashboard</small></button>
+    <button class="admin-only" data-page="inventory">🥕<small data-i18n="inventory">Stock</small></button>
+  </div>
+
+  <dialog id="cartDialog" class="modal"><form method="dialog" class="modal-card"><div class="modal-head"><div><p class="eyebrow" data-i18n="yourBasket">YOUR BASKET</p><h2 data-i18n="cart">Shopping cart</h2></div><button class="close-btn" value="cancel">✕</button></div><div id="cartItems"></div><div class="cart-total"><span data-i18n="subtotal">Subtotal</span><b id="cartTotal">$0.00</b></div><div class="form-grid"><label><span data-i18n="fullName">Full name</span><input id="buyerName" required placeholder="Your name"></label><label><span data-i18n="phone">Phone number</span><input id="buyerPhone" required placeholder="012 345 678"></label><label class="full"><span data-i18n="deliveryAddress">Delivery address</span><input id="buyerAddress" required placeholder="Village, commune, district, province"></label></div><button type="button" class="primary-btn wide" id="checkoutBtn" data-i18n="placeOrder">Place wholesale order</button><p class="tiny muted" data-i18n="demoNote">Orders are saved on this device only. Online notifications need a connected database.</p></form></dialog>
+
+  <dialog id="productDialog" class="modal"><form method="dialog" class="modal-card"><div class="modal-head"><h2 data-i18n="newProduct">New product</h2><button class="close-btn" value="cancel">✕</button></div><div class="form-grid"><label><span data-i18n="productName">Product name</span><input id="newName" required></label><label><span data-i18n="category">Category</span><select id="newCategory"><option>Leafy</option><option>Root</option><option>Fruit</option><option>Other</option></select></label><label><span data-i18n="pricePerKg">Price per kg ($)</span><input id="newPrice" type="number" min="0.01" step="0.01" required></label><label><span data-i18n="stockKg">Stock (kg)</span><input id="newStock" type="number" min="0" required></label><label><span data-i18n="emoji">Product emoji</span><input id="newEmoji" value="🥬" maxlength="4"></label></div><button type="button" class="primary-btn wide" id="saveProductBtn" data-i18n="saveProduct">Save product</button></form></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <footer><span>🥬 Fresh Market Wholesale</span><span data-i18n="footer">Fresh vegetables • Better business</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>

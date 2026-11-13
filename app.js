@@ -18,11 +18,27 @@ const translations = {
  en:{install:"Install app",storeName:"Fresh Market",storeSub:"Wholesale vegetables",shop:"Shop vegetables",orders:"My orders",dashboard:"Dashboard",inventory:"Inventory",customers:"Customers",freshPromise:"Fresh goods, fair prices.",freshPromiseSub:"Wholesale made simple.",eyebrow:"FRESH FROM THE FARM",shopTitle:"Vegetable marketplace",shopSubtitle:"Quality vegetables for shops, restaurants and families.",cart:"Cart",wholesaleTag:"WHOLESALE • FRESH • LOCAL",heroTitle:"Good food starts<br>with fresh vegetables.",heroText:"Order by kilogram, bag or box. Great value for every business.",browse:"Browse vegetables ↓",searchPlaceholder:"Search vegetables...",allCategories:"All categories",leafy:"Leafy greens",root:"Root vegetables",fruit:"Fruit vegetables",other:"Other",popular:"Popular vegetables",popularSub:"Fresh picks available for wholesale.",businessOverview:"Business overview",overviewSub:"A quick look at your shop.",export:"Export orders CSV",recentOrders:"Recent orders",latestActivity:"Latest activity",manageInventory:"Manage inventory",inventorySub:"Add products and update stock and prices.",addProduct:"Add product",product:"Product",category:"Category",price:"Price / kg",stock:"Stock (kg)",actions:"Actions",customerList:"Customer list",customerSub:"People who have ordered from your shop.",customer:"Customer",phone:"Phone",totalSpent:"Total spent",orderHistory:"Order history",orderSub:"Check your order status and details.",yourBasket:"YOUR BASKET",subtotal:"Subtotal",fullName:"Full name",deliveryAddress:"Delivery address",placeOrder:"Place wholesale order",demoNote:"Demo app: orders are saved on this device only.",newProduct:"New product",productName:"Product name",pricePerKg:"Price per kg ($)",stockKg:"Stock (kg)",emoji:"Product emoji",saveProduct:"Save product",footer:"Fresh vegetables • Better business",inStock:"In stock",lowStock:"Low stock",add:"Add to cart",emptyCart:"Your cart is empty.",noOrders:"No orders yet.",orderPlaced:"Your order was placed!",customerRole:"Customer",adminRole:"Admin / Seller",switchRole:"Switch role",statusPending:"Pending",statusConfirmed:"Confirmed",statusDelivered:"Delivered",totalSales:"Total sales",ordersCount:"Orders",productsCount:"Products",lowStockCount:"Low stock",edit:"Edit",delete:"Delete",confirmDelete:"Delete this product?",qty:"Quantity",kg:"kg",emptyResults:"No vegetables found.",nameRequired:"Please enter your name, phone and address.",stockError:"Not enough stock available.",categoryLeafy:"Leafy greens",categoryRoot:"Root vegetables",categoryFruit:"Fruit vegetables",categoryOther:"Other"},
  km:{install:"ដំឡើងកម្មវិធី",storeName:"ផ្សារស្រស់",storeSub:"លក់ដុំបន្លែ",shop:"ទិញបន្លែ",orders:"ការបញ្ជាទិញ",dashboard:"ផ្ទាំងគ្រប់គ្រង",inventory:"ស្តុកទំនិញ",customers:"អតិថិជន",freshPromise:"បន្លែស្រស់ តម្លៃសមរម្យ។",freshPromiseSub:"ការលក់ដុំកាន់តែងាយស្រួល។",eyebrow:"បន្លែស្រស់ពីកសិដ្ឋាន",shopTitle:"ផ្សារបន្លែ",shopSubtitle:"បន្លែមានគុណភាពសម្រាប់ហាង ភោជនីយដ្ឋាន និងគ្រួសារ។",cart:"កន្ត្រក",wholesaleTag:"លក់ដុំ • ស្រស់ • ក្នុងស្រុក",heroTitle:"អាហារល្អ ចាប់ផ្តើមពីបន្លែស្រស់។",heroText:"កម្មង់តាមគីឡូ ការ៉ុង ឬប្រអប់។ តម្លៃល្អសម្រាប់អាជីវកម្ម។",browse:"មើលបន្លែ ↓",searchPlaceholder:"ស្វែងរកបន្លែ...",allCategories:"គ្រប់ប្រភេទ",leafy:"បន្លែស្លឹក",root:"បន្លែមើម",fruit:"បន្លែផ្លែ",other:"ផ្សេងៗ",popular:"បន្លែពេញនិយម",popularSub:"បន្លែស្រស់សម្រាប់លក់ដុំ។",businessOverview:"ទិដ្ឋភាពអាជីវកម្ម",overviewSub:"សង្ខេបអំពីហាងរបស់អ្នក។",export:"ទាញយក CSV",recentOrders:"ការបញ្ជាទិញថ្មីៗ",latestActivity:"សកម្មភាពថ្មីៗ",manageInventory:"គ្រប់គ្រងស្តុក",inventorySub:"បន្ថែមផលិតផល និងកែប្រែស្តុក/តម្លៃ។",addProduct:"បន្ថែមផលិតផល",product:"ផលិតផល",category:"ប្រភេទ",price:"តម្លៃ / គីឡូ",stock:"ស្តុក (គីឡូ)",actions:"សកម្មភាព",customerList:"បញ្ជីអតិថិជន",customerSub:"អតិថិជនដែលបានកម្មង់ពីហាង។",customer:"អតិថិជន",phone:"ទូរស័ព្ទ",totalSpent:"ចំណាយសរុប",orderHistory:"ប្រវត្តិការបញ្ជាទិញ",orderSub:"ពិនិត្យស្ថានភាព និងព័ត៌មានការកម្មង់។",yourBasket:"កន្ត្រកទំនិញ",subtotal:"សរុបរង",fullName:"ឈ្មោះពេញ",deliveryAddress:"អាសយដ្ឋានដឹកជញ្ជូន",placeOrder:"បញ្ជាក់ការកម្មង់លក់ដុំ",demoNote:"កម្មវិធីសាកល្បង៖ ទិន្នន័យរក្សាទុកតែក្នុងឧបករណ៍នេះ។",newProduct:"ផលិតផលថ្មី",productName:"ឈ្មោះផលិតផល",pricePerKg:"តម្លៃក្នុងមួយគីឡូ ($)",stockKg:"ស្តុក (គីឡូ)",emoji:"រូបតំណាងផលិតផល",saveProduct:"រក្សាទុកផលិតផល",footer:"បន្លែស្រស់ • អាជីវកម្មកាន់តែល្អ",inStock:"មានស្តុក",lowStock:"ស្តុកតិច",add:"បន្ថែម",emptyCart:"កន្ត្រករបស់អ្នកទទេ។",noOrders:"មិនទាន់មានការកម្មង់ទេ។",orderPlaced:"ការកម្មង់បានជោគជ័យ!",customerRole:"អតិថិជន",adminRole:"អ្នកគ្រប់គ្រង / អ្នកលក់",switchRole:"ប្តូរតួនាទី",statusPending:"កំពុងរង់ចាំ",statusConfirmed:"បានបញ្ជាក់",statusDelivered:"បានដឹកជញ្ជូន",totalSales:"ការលក់សរុប",ordersCount:"ការកម្មង់",productsCount:"ផលិតផល",lowStockCount:"ស្តុកតិច",edit:"កែប្រែ",delete:"លុប",confirmDelete:"លុបផលិតផលនេះ?",qty:"ចំនួន",kg:"គីឡូ",emptyResults:"រកមិនឃើញបន្លែទេ។",nameRequired:"សូមបញ្ចូលឈ្មោះ លេខទូរស័ព្ទ និងអាសយដ្ឋាន។",stockError:"ស្តុកមិនគ្រប់គ្រាន់ទេ។",categoryLeafy:"បន្លែស្លឹក",categoryRoot:"បន្លែមើម",categoryFruit:"បន្លែផ្លែ",categoryOther:"ផ្សេងៗ"}
 };
-let lang=localStorage.getItem("fm_lang")||"en";
-let role=localStorage.getItem("fm_role")||"customer";
-let products=JSON.parse(localStorage.getItem("fm_products")||"null")||defaultProducts;
-let orders=JSON.parse(localStorage.getItem("fm_orders")||"[]");
-let cart=JSON.parse(localStorage.getItem("fm_cart")||"{}");
+// Read local data safely. A damaged saved value must never prevent the app from opening.
+function readStored(key, fallback){
+  try {
+    const raw=localStorage.getItem(key);
+    return raw===null ? fallback : JSON.parse(raw);
+  } catch(error) {
+    console.warn("Resetting invalid local data:", key, error);
+    try { localStorage.removeItem(key); } catch(_) {}
+    return fallback;
+  }
+}
+let lang=readStored("fm_lang","en");
+if(lang!=="en" && lang!=="km") lang="en";
+let role=readStored("fm_role","customer");
+if(role!=="admin" && role!=="customer") role="customer";
+let products=readStored("fm_products",null)||defaultProducts;
+let orders=readStored("fm_orders",[]);
+let cart=readStored("fm_cart",{});
+if(!Array.isArray(products)) products=defaultProducts;
+if(!Array.isArray(orders)) orders=[];
+if(!cart || typeof cart!=="object" || Array.isArray(cart)) cart={};
 let deferredInstall=null;
 const t=(key)=>translations[lang][key]||key;
 const money=(n)=>"$"+Number(n).toFixed(2);
